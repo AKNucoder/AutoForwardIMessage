@@ -5,6 +5,7 @@
 # References
 # https://discussions.apple.com/thread/5214769?start=0&tstart=0
 # https://46b.it/2012/hacking-with-imessage
+# http://stackoverflow.com/questions/34170906/error-in-applescript-for-imessage-can-t-get-service-of-text-chat-id - Forum on bug in El Capitan. Currently at same conclusion.
 
 # You can enumerate all your chat accounts on Messages like this:
 (*
@@ -54,7 +55,7 @@ using terms from application "Messages"
 		set recvBuddy to name of theBuddy as text
 		
 		# fwd
-		if recvText /= "" then
+		if recvText ­ "" then
 			try
 				if recvService = myIMsgService then # incoming iMessage
 					# recvBuddyId is ABCDEFGH-IJKL-MNOP-QRST-UVWXYZABCDEF:+17894560123
